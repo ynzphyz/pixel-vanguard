@@ -484,3 +484,258 @@
     text-align: center;
     font-size: 14px;
 }
+
+
+/*** Custom Gaming Theme ***/
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.btn-primary:hover {
+    background-color: #660066 !important;
+    border-color: #660066 !important;
+}
+
+.border-primary {
+    border-color: var(--primary) !important;
+}
+
+/* Package Item Improvements */
+.package-item {
+    border-radius: 15px;
+    overflow: hidden;
+    background: #fff;
+    height: 100%;
+}
+
+.package-item .overflow-hidden {
+    height: 220px;
+}
+
+.package-item .overflow-hidden img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.package-item .d-flex.border-bottom small {
+    font-size: 12px;
+    padding: 10px 5px;
+}
+
+.package-item .text-center.p-4 h3 {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.package-item .btn-sm {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: #fff !important;
+}
+
+.package-item .btn-sm:hover {
+    background-color: #660066 !important;
+    border-color: #660066 !important;
+}
+
+/* Service Item Fix */
+.service-item {
+    border-radius: 15px;
+    height: auto;
+    min-height: 280px;
+}
+
+.service-item i {
+    color: var(--primary);
+}
+
+.service-item:hover i {
+    color: #fff !important;
+}
+
+/* Team Item Improvements */
+.team-item {
+    border-radius: 15px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.team-item .overflow-hidden {
+    border-radius: 15px 15px 0 0;
+}
+
+/* Destination/Popular Games */
+.destination a {
+    border-radius: 15px;
+    overflow: hidden;
+    display: block;
+}
+
+.destination img {
+    border-radius: 15px;
+}
+
+/* Process Steps */
+.position-relative.border.border-primary {
+    border-radius: 15px;
+    background: #fff;
+}
+
+/* Form Styling */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(128, 0, 128, 0.25);
+}
+
+/* Booking Section */
+.booking {
+    border-radius: 15px;
+    background: linear-gradient(rgba(128, 0, 128, .85), rgba(128, 0, 128, .85)), url(../img/bg-hero.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+/* Stars Rating */
+.fa-star {
+    color: #FFD700 !important;
+}
+
+/* Testimonial */
+.testimonial-item {
+    border-radius: 15px;
+}
+
+/* Footer Gallery Images */
+.footer .row.g-2 img {
+    border-radius: 5px;
+}
+
+/* 404 Page */
+.display-1 {
+    color: var(--primary);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .1);
+}
+
+.dropdown-item:hover,
+.dropdown-item.active {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+
+/* Additional UI Improvements */
+
+/* Card shadows and borders */
+.package-item,
+.service-item,
+.team-item,
+.testimonial-item {
+    border: none;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Section titles */
+.section-title {
+    color: var(--primary) !important;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Hero header overlay */
+.hero-header {
+    background: linear-gradient(rgba(128, 0, 128, .7), rgba(20, 20, 31, .8)), url(../img/bg-hero.jpg);
+}
+
+/* Navbar active link */
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary) !important;
+}
+
+/* Process step circles */
+.position-relative.border.border-primary .d-inline-flex {
+    background: var(--primary) !important;
+}
+
+/* Package item price */
+.package-item h3 {
+    color: var(--primary) !important;
+    font-size: 1.5rem;
+}
+
+/* Smooth transitions */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Better image hover effects */
+.package-item:hover,
+.team-item:hover,
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(128, 0, 128, 0.2);
+}
+
+/* Contact info icons */
+.d-flex.align-items-center .bg-primary {
+    background-color: var(--primary) !important;
+    border-radius: 5px;
+}
+
+/* Newsletter input */
+.footer .form-control {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+
+.footer .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Breadcrumb links */
+.breadcrumb-item a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.breadcrumb-item a:hover {
+    color: #fff;
+}
+
+/* Game info badges in destination */
+.destination .bg-white {
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+/* Platform section improvements */
+.platform-logo {
+    filter: grayscale(0);
+    transition: all 0.3s ease;
+}
+
+.service-item:hover .platform-logo {
+    filter: brightness(0) invert(1);
+}
