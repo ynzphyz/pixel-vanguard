@@ -3,71 +3,63 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Gamer - Game Reviews</title>
+    <title>Gamer - Reviews</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-    <!-- Favicon -->
     <link href="img/console-removebg-preview.png" rel="icon">
-
-    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-
-    <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        .review-card { background: linear-gradient(145deg, #ffffff, #f8f9fa); border-radius: 20px; border: none; transition: all 0.3s; position: relative; overflow: hidden; }
+        .review-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(128,0,128,0.15); }
+        .review-card::before { content: '"'; position: absolute; top: 20px; right: 30px; font-size: 100px; color: rgba(128,0,128,0.1); font-family: Georgia, serif; line-height: 1; }
+        .reviewer-img { width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 3px solid #800080; }
+        .rating-badge { background: linear-gradient(135deg, #800080, #4a0080); padding: 5px 15px; border-radius: 20px; }
+        .verified-badge { background: #28a745; padding: 3px 10px; border-radius: 10px; font-size: 11px; }
+        .review-stats { background: linear-gradient(135deg, #1a1a2e, #16213e); border-radius: 20px; }
+        .rating-bar { height: 10px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
+        .rating-fill { height: 100%; background: linear-gradient(90deg, #ffc107, #ffdb4d); border-radius: 10px; }
+        .highlight-review { background: linear-gradient(135deg, #800080, #4a0080); }
+        .highlight-review .review-card::before { color: rgba(255,255,255,0.1); }
+    </style>
 </head>
 
 <body>
-    <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"></div>
     </div>
-    <!-- Spinner End -->
 
-    <!-- Topbar Start -->
+    <!-- Topbar -->
     <div class="container-fluid bg-dark px-5 d-none d-lg-block">
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Semarang, Jawa Tengah, Indonesia</small>
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Semarang, Jawa Tengah</small>
                     <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+6287760573989</small>
                     <small class="text-light"><i class="fa fa-envelope-open me-2"></i>pemberani073@gmail.com</small>
                 </div>
             </div>
-
             <div class="col-lg-4 text-center text-lg-end">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Topbar End -->
 
-    <!-- Navbar & Hero Start -->
+
+    <!-- Navbar -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-            <a href="" class="navbar-brand p-0">
-                <h1 class="m-0" style="color: aqua;"><img src="img/console-removebg-preview.png"></h1>
+            <a href="index.html" class="navbar-brand p-0">
+                <h1 class="m-0"><img src="img/console-removebg-preview.png"></h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -85,7 +77,6 @@
                             <a href="booking.html" class="dropdown-item">Pre-Order</a>
                             <a href="team.html" class="dropdown-item">Our Team</a>
                             <a href="testimonial.html" class="dropdown-item active">Reviews</a>
-                            <a href="404.html" class="dropdown-item">404 Page</a>
                         </div>
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
@@ -97,101 +88,281 @@
             <div class="container py-5">
                 <div class="row justify-content-center py-5">
                     <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                        <h1 class="display-3 text-white animated slideInDown">Gamer Reviews</h1>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                                <li class="breadcrumb-item text-white active" aria-current="page">Reviews</li>
-                            </ol>
-                        </nav>
+                        <h1 class="display-3 text-white animated slideInDown">Customer Reviews</h1>
+                        <p class="fs-5 text-white mb-4">See what our gamers say about us</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Navbar & Hero End -->
 
-
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <!-- Rating Overview -->
+    <div class="container-xxl py-5">
         <div class="container">
-            <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3">Reviews</h6>
-                <h1 class="mb-5">What Gamers Say!</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel position-relative">
-                <div class="testimonial-item bg-white text-center border p-4">
-                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/ares2.jpg" style="width: 80px; height: 80px; object-fit: cover;">
-                    <h5 class="mb-0">ProGamer_ID</h5>
-                    <p>Jakarta, Indonesia</p>
-                    <p class="mb-0">Best game store ever! Fast delivery and great prices. Got my Black Myth: Wukong key instantly. Highly recommended for all gamers!</p>
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-4 wow fadeInLeft">
+                    <div class="review-stats p-4 text-center">
+                        <h1 class="display-1 text-white mb-0">4.9</h1>
+                        <div class="text-warning mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-white-50 mb-0">Based on 1,250+ reviews</p>
+                    </div>
                 </div>
-                <div class="testimonial-item bg-white text-center border p-4">
-                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/cahya.jpg" style="width: 80px; height: 80px; object-fit: cover;">
-                    <h5 class="mb-0">CasualPlayer99</h5>
-                    <p>Semarang, Indonesia</p>
-                    <p class="mt-2 mb-0">Amazing service! The pre-order system is super easy. Got exclusive bonuses for COD Black Ops 6. Will definitely buy again!</p>
-                </div>
-                <div class="testimonial-item bg-white text-center border p-4">
-                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/about.jpeg" style="width: 80px; height: 80px; object-fit: cover;">
-                    <h5 class="mb-0">StreamerQueen</h5>
-                    <p>Bandung, Indonesia</p>
-                    <p class="mt-2 mb-0">Love the variety of games available. Customer support is very helpful. Got great deals on Steam games during the sale!</p>
-                </div>
-                <div class="testimonial-item bg-white text-center border p-4">
-                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/Screenshot 2025-09-24 130025.png" style="width: 80px; height: 80px; object-fit: cover;">
-                    <h5 class="mb-0">RPG_Master</h5>
-                    <p>Surabaya, Indonesia</p>
-                    <p class="mt-2 mb-0">Trusted store with competitive prices. Bought RDR2 and the key worked perfectly. Fast and reliable service!</p>
+                <div class="col-lg-8 wow fadeInRight">
+                    <h6 class="section-title bg-white text-primary px-3">RATINGS</h6>
+                    <h2 class="mb-4">Rating Breakdown</h2>
+                    <div class="mb-3">
+                        <div class="d-flex align-items-center mb-1">
+                            <span class="me-2">5 <i class="fas fa-star text-warning"></i></span>
+                            <div class="rating-bar flex-grow-1 me-2"><div class="rating-fill" style="width: 85%"></div></div>
+                            <span class="text-muted">85%</span>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex align-items-center mb-1">
+                            <span class="me-2">4 <i class="fas fa-star text-warning"></i></span>
+                            <div class="rating-bar flex-grow-1 me-2"><div class="rating-fill" style="width: 10%"></div></div>
+                            <span class="text-muted">10%</span>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex align-items-center mb-1">
+                            <span class="me-2">3 <i class="fas fa-star text-warning"></i></span>
+                            <div class="rating-bar flex-grow-1 me-2"><div class="rating-fill" style="width: 3%"></div></div>
+                            <span class="text-muted">3%</span>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex align-items-center mb-1">
+                            <span class="me-2">2 <i class="fas fa-star text-warning"></i></span>
+                            <div class="rating-bar flex-grow-1 me-2"><div class="rating-fill" style="width: 1%"></div></div>
+                            <span class="text-muted">1%</span>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex align-items-center mb-1">
+                            <span class="me-2">1 <i class="fas fa-star text-warning"></i></span>
+                            <div class="rating-bar flex-grow-1 me-2"><div class="rating-fill" style="width: 1%"></div></div>
+                            <span class="text-muted">1%</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Testimonial End -->
 
 
-    <!-- Footer Start -->
+    <!-- Reviews Grid -->
+    <div class="container-xxl py-5 bg-light">
+        <div class="container">
+            <div class="text-center wow fadeInUp mb-5">
+                <h6 class="section-title bg-light text-center text-primary px-3">TESTIMONIALS</h6>
+                <h1 class="mb-4">What Gamers Say</h1>
+            </div>
+            <div class="row g-4">
+                <!-- Review 1 -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="review-card p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="img/ares2.jpg" alt="" class="reviewer-img me-3">
+                            <div class="flex-grow-1">
+                                <h6 class="mb-0">ProGamer_ID</h6>
+                                <small class="text-muted">Jakarta, Indonesia</small>
+                            </div>
+                            <span class="rating-badge text-white"><i class="fas fa-star me-1"></i>5.0</span>
+                        </div>
+                        <div class="mb-2">
+                            <span class="verified-badge text-white"><i class="fas fa-check me-1"></i>Verified Purchase</span>
+                            <small class="text-muted ms-2">Black Myth: Wukong</small>
+                        </div>
+                        <p class="mb-0">"Best game store ever! Fast delivery and great prices. Got my Black Myth: Wukong key instantly. The customer service is top-notch. Highly recommended for all gamers!"</p>
+                    </div>
+                </div>
+                <!-- Review 2 -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="review-card p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="img/cahya.jpg" alt="" class="reviewer-img me-3">
+                            <div class="flex-grow-1">
+                                <h6 class="mb-0">CasualPlayer99</h6>
+                                <small class="text-muted">Semarang, Indonesia</small>
+                            </div>
+                            <span class="rating-badge text-white"><i class="fas fa-star me-1"></i>5.0</span>
+                        </div>
+                        <div class="mb-2">
+                            <span class="verified-badge text-white"><i class="fas fa-check me-1"></i>Verified Purchase</span>
+                            <small class="text-muted ms-2">COD Black Ops 6</small>
+                        </div>
+                        <p class="mb-0">"Amazing service! The pre-order system is super easy. Got exclusive bonuses for COD Black Ops 6. Will definitely buy again! Love the gaming community here."</p>
+                    </div>
+                </div>
+                <!-- Review 3 -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="review-card p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="img/about.jpeg" alt="" class="reviewer-img me-3">
+                            <div class="flex-grow-1">
+                                <h6 class="mb-0">StreamerQueen</h6>
+                                <small class="text-muted">Bandung, Indonesia</small>
+                            </div>
+                            <span class="rating-badge text-white"><i class="fas fa-star me-1"></i>4.8</span>
+                        </div>
+                        <div class="mb-2">
+                            <span class="verified-badge text-white"><i class="fas fa-check me-1"></i>Verified Purchase</span>
+                            <small class="text-muted ms-2">Steam Gift Card</small>
+                        </div>
+                        <p class="mb-0">"Love the variety of games available. Customer support is very helpful and responsive. Got great deals on Steam games during the sale! Perfect for streamers."</p>
+                    </div>
+                </div>
+                <!-- Review 4 -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="review-card p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="img/Screenshot 2025-09-24 130025.png" alt="" class="reviewer-img me-3">
+                            <div class="flex-grow-1">
+                                <h6 class="mb-0">RPG_Master</h6>
+                                <small class="text-muted">Surabaya, Indonesia</small>
+                            </div>
+                            <span class="rating-badge text-white"><i class="fas fa-star me-1"></i>5.0</span>
+                        </div>
+                        <div class="mb-2">
+                            <span class="verified-badge text-white"><i class="fas fa-check me-1"></i>Verified Purchase</span>
+                            <small class="text-muted ms-2">Red Dead Redemption 2</small>
+                        </div>
+                        <p class="mb-0">"Trusted store with competitive prices. Bought RDR2 and the key worked perfectly. Fast and reliable service! This is now my go-to store for all game purchases."</p>
+                    </div>
+                </div>
+                <!-- Review 5 -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="review-card p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="" alt="" class="reviewer-img me-3" style="background: #ddd;">
+                            <div class="flex-grow-1">
+                                <h6 class="mb-0">NightOwlGamer</h6>
+                                <small class="text-muted">Yogyakarta, Indonesia</small>
+                            </div>
+                            <span class="rating-badge text-white"><i class="fas fa-star me-1"></i>4.9</span>
+                        </div>
+                        <div class="mb-2">
+                            <span class="verified-badge text-white"><i class="fas fa-check me-1"></i>Verified Purchase</span>
+                            <small class="text-muted ms-2">GTA V</small>
+                        </div>
+                        <p class="mb-0">"Instant delivery as promised! Got my GTA V key within seconds. The prices are unbeatable compared to other stores. Definitely recommending to all my friends!"</p>
+                    </div>
+                </div>
+                <!-- Review 6 -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="review-card p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="" alt="" class="reviewer-img me-3" style="background: #ddd;">
+                            <div class="flex-grow-1">
+                                <h6 class="mb-0">CompetitiveKing</h6>
+                                <small class="text-muted">Malang, Indonesia</small>
+                            </div>
+                            <span class="rating-badge text-white"><i class="fas fa-star me-1"></i>5.0</span>
+                        </div>
+                        <div class="mb-2">
+                            <span class="verified-badge text-white"><i class="fas fa-check me-1"></i>Verified Purchase</span>
+                            <small class="text-muted ms-2">Valorant Points</small>
+                        </div>
+                        <p class="mb-0">"Best place to top up Valorant Points! Fast, secure, and always has the best deals. The website is easy to use and payment options are plenty. 10/10!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Write Review CTA -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInLeft">
+                    <h6 class="section-title bg-white text-primary px-3">SHARE</h6>
+                    <h1 class="mb-4">Share Your Experience</h1>
+                    <p class="mb-4">Have you purchased from us? We'd love to hear about your experience! Your feedback helps us improve and helps other gamers make informed decisions.</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <div class="text-center">
+                            <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px;">
+                                <i class="fas fa-shopping-cart fa-2x text-white"></i>
+                            </div>
+                            <p class="mb-0 small">1. Make a Purchase</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px;">
+                                <i class="fas fa-gamepad fa-2x text-white"></i>
+                            </div>
+                            <p class="mb-0 small">2. Play Your Game</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center mb-2" style="width: 60px; height: 60px;">
+                                <i class="fas fa-star fa-2x text-white"></i>
+                            </div>
+                            <p class="mb-0 small">3. Leave a Review</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInRight">
+                    <div class="bg-dark p-4 rounded">
+                        <h4 class="text-white mb-4"><i class="fas fa-pen me-2"></i>Write a Review</h4>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control bg-transparent text-white" placeholder="Your Name">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control bg-transparent text-white" placeholder="Your Email">
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control bg-transparent text-white" placeholder="Game Purchased">
+                                </div>
+                                <div class="col-12">
+                                    <label class="text-white mb-2">Your Rating</label>
+                                    <div class="d-flex gap-2">
+                                        <button type="button" class="btn btn-outline-warning"><i class="fas fa-star"></i></button>
+                                        <button type="button" class="btn btn-outline-warning"><i class="fas fa-star"></i></button>
+                                        <button type="button" class="btn btn-outline-warning"><i class="fas fa-star"></i></button>
+                                        <button type="button" class="btn btn-outline-warning"><i class="fas fa-star"></i></button>
+                                        <button type="button" class="btn btn-outline-warning"><i class="fas fa-star"></i></button>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control bg-transparent text-white" rows="4" placeholder="Share your experience..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100 py-3">Submit Review</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-3">Quick Links</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">FAQs & Help</a>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="service.html">Services</a>
+                    <a class="btn btn-link" href="package.html">Game Store</a>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>SMKN 7 Semarang, Jawa Tengah</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+62 87760573989</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Semarang, Jawa Tengah</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+6287760573989</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>pemberani073@gmail.com</p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-white mb-3">Follow Us</h4>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Game Gallery</h4>
-                    <div class="row g-2 pt-2">
-                        <div class="col-4"><img class="img-fluid bg-light p-1" src="img/rdr22.jpg" alt=""></div>
-                        <div class="col-4"><img class="img-fluid bg-light p-1" src="img/gta 5.jpg" alt=""></div>
-                        <div class="col-4"><img class="img-fluid bg-light p-1" src="img/pubg.jpg" alt=""></div>
-                        <div class="col-4"><img class="img-fluid bg-light p-1" src="img/black-myth-wukong-HD-scaled.jpg" alt=""></div>
-                        <div class="col-4"><img class="img-fluid bg-light p-1" src="img/call-of-duty-black-ops-6-1-1536x864.jpg" alt=""></div>
-                        <div class="col-4"><img class="img-fluid bg-light p-1" src="img/counter-strike-2-csgo-cases-record-steam-valve-fps-game-limited-test.jpg" alt=""></div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Newsletter</h4>
-                    <p>Subscribe for latest game deals and updates.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Subscribe</button>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
             </div>
@@ -199,40 +370,22 @@
         <div class="container">
             <div class="copyright">
                 <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Gamer Store</a>, All Right Reserved.
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <div class="footer-menu">
-                            <a href="">Home</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FAQs</a>
-                        </div>
+                    <div class="col-12 text-center">
+                        &copy; 2024 <a class="border-bottom" href="#">Gamer Store</a>. All Rights Reserved.
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer End -->
 
-    <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-    <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
-    <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
-
 </html>

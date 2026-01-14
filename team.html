@@ -5,69 +5,60 @@
     <meta charset="utf-8">
     <title>Gamer - Our Team</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-    <!-- Favicon -->
     <link href="img/console-removebg-preview.png" rel="icon">
-
-    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-
-    <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        .team-card { background: linear-gradient(145deg, #1a1a2e, #16213e); border-radius: 20px; overflow: hidden; transition: all 0.4s; position: relative; }
+        .team-card:hover { transform: translateY(-15px); box-shadow: 0 20px 40px rgba(128,0,128,0.3); }
+        .team-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, #800080, #f093fb, #800080); }
+        .team-img-wrapper { position: relative; padding: 30px 30px 0; }
+        .team-img { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 5px solid #800080; margin: 0 auto; display: block; }
+        .team-level { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #800080, #4a0080); padding: 5px 20px; border-radius: 20px; font-size: 12px; }
+        .team-social a { width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(128,0,128,0.3); color: white; margin: 0 5px; transition: all 0.3s; }
+        .team-social a:hover { background: #800080; transform: scale(1.1); }
+        .skill-bar { height: 8px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
+        .skill-progress { height: 100%; background: linear-gradient(90deg, #800080, #f093fb); border-radius: 10px; }
+        .stats-box { background: rgba(128,0,128,0.2); border-radius: 10px; }
+    </style>
 </head>
 
 <body>
-    <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"></div>
     </div>
-    <!-- Spinner End -->
 
-    <!-- Topbar Start -->
+    <!-- Topbar -->
     <div class="container-fluid bg-dark px-5 d-none d-lg-block">
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Semarang, Jawa Tengah, Indonesia</small>
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Semarang, Jawa Tengah</small>
                     <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+6287760573989</small>
                     <small class="text-light"><i class="fa fa-envelope-open me-2"></i>pemberani073@gmail.com</small>
                 </div>
             </div>
-
             <div class="col-lg-4 text-center text-lg-end">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Topbar End -->
 
-    <!-- Navbar & Hero Start -->
+
+    <!-- Navbar -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-            <a href="" class="navbar-brand p-0">
-                <h1 class="m-0" style="color: aqua;"><img src="img/console-removebg-preview.png"></h1>
+            <a href="index.html" class="navbar-brand p-0">
+                <h1 class="m-0"><img src="img/console-removebg-preview.png"></h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -85,7 +76,6 @@
                             <a href="booking.html" class="dropdown-item">Pre-Order</a>
                             <a href="team.html" class="dropdown-item active">Our Team</a>
                             <a href="testimonial.html" class="dropdown-item">Reviews</a>
-                            <a href="404.html" class="dropdown-item">404 Page</a>
                         </div>
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
@@ -98,136 +88,230 @@
                 <div class="row justify-content-center py-5">
                     <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
                         <h1 class="display-3 text-white animated slideInDown">Our Team</h1>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                                <li class="breadcrumb-item text-white active" aria-current="page">Our Team</li>
-                            </ol>
-                        </nav>
+                        <p class="fs-5 text-white mb-4">Meet the gamers behind Gamer Store</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Navbar & Hero End -->
 
-
-    <!-- Team Start -->
+    <!-- Team Stats -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Development Team</h6>
-                <h1 class="mb-5">Meet Our Team</h1>
-            </div>
-            <div class="row g-4">
+            <div class="row g-4 justify-content-center mb-5">
+                <div class="col-lg-3 col-md-6 wow fadeInUp">
+                    <div class="stats-box text-center p-4">
+                        <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                        <h2 class="text-dark mb-0">4</h2>
+                        <p class="text-muted mb-0">Team Members</p>
+                    </div>
+                </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/ares2.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-tiktok"></i></a>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Arez Dito Yudha Pratama</h5>
-                            <small>Project Manager</small>
-                        </div>
+                    <div class="stats-box text-center p-4">
+                        <i class="fas fa-gamepad fa-3x text-primary mb-3"></i>
+                        <h2 class="text-dark mb-0">500+</h2>
+                        <p class="text-muted mb-0">Games Played</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="stats-box text-center p-4">
+                        <i class="fas fa-trophy fa-3x text-primary mb-3"></i>
+                        <h2 class="text-dark mb-0">50+</h2>
+                        <p class="text-muted mb-0">Achievements</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/cahya.jpg" alt="">
+                    <div class="stats-box text-center p-4">
+                        <i class="fas fa-clock fa-3x text-primary mb-3"></i>
+                        <h2 class="text-dark mb-0">10K+</h2>
+                        <p class="text-muted mb-0">Hours Gaming</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Team Members -->
+    <div class="container-xxl py-5 bg-light">
+        <div class="container">
+            <div class="text-center wow fadeInUp mb-5">
+                <h6 class="section-title bg-light text-center text-primary px-3">SQUAD</h6>
+                <h1 class="mb-4">Meet Our Team</h1>
+            </div>
+            <div class="row g-4">
+                <!-- Member 1 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-card text-center pb-4">
+                        <div class="team-img-wrapper">
+                            <img src="img/ares2.jpg" alt="Arez" class="team-img">
+                            <span class="team-level text-white"><i class="fas fa-crown me-1"></i>Leader</span>
                         </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-tiktok"></i></a>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Cahyaning Wulan Shafarahma Putri</h5>
-                            <small>UI/UX Designer</small>
+                        <div class="p-4">
+                            <h5 class="text-white mb-1">Arez Dito Yudha Pratama</h5>
+                            <p class="text-primary mb-3">Project Manager</p>
+                            <p class="text-white-50 small mb-3">Leading the team with strategic vision and gaming expertise.</p>
+                            <div class="mb-3">
+                                <small class="text-white-50 d-flex justify-content-between mb-1">
+                                    <span>Leadership</span><span>95%</span>
+                                </small>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
+                            </div>
+                            <div class="team-social">
+                                <a href="https://www.instagram.com/arszprtma?igsh=bG8zejYwYjZmbWQz"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.tiktok.com/@areszx3?_r=1&_t=ZS-933WMeMq0BU"><i class="fab fa-tiktok"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/about.jpeg" alt="">
+                <!-- Member 2 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-card text-center pb-4">
+                        <div class="team-img-wrapper">
+                            <img src="img/cahya.jpg" alt="Cahya" class="team-img">
+                            <span class="team-level text-white"><i class="fas fa-palette me-1"></i>Designer</span>
                         </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-tiktok"></i></a>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Ferissa Ilen Aswa Aulia</h5>
-                            <small>Content Creator</small>
+                        <div class="p-4">
+                            <h5 class="text-white mb-1">Cahyaning Wulan S.P</h5>
+                            <p class="text-primary mb-3">UI/UX Designer</p>
+                            <p class="text-white-50 small mb-3">Creating beautiful and intuitive gaming experiences.</p>
+                            <div class="mb-3">
+                                <small class="text-white-50 d-flex justify-content-between mb-1">
+                                    <span>Creativity</span><span>92%</span>
+                                </small>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 92%"></div></div>
+                            </div>
+                            <div class="team-social">
+                                <a href="https://www.instagram.com/sfarhmptri?igsh=a2llaGw1cDJhYjl5"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.tiktok.com/@sfaarma?_r=1&_t=ZS-933apD9aUnl"><i class="fab fa-tiktok"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/Screenshot 2025-09-24 130025.png" alt="">
+                <!-- Member 3 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-card text-center pb-4">
+                        <div class="team-img-wrapper">
+                            <img src="img/about.jpeg" alt="Ferissa" class="team-img">
+                            <span class="team-level text-white"><i class="fas fa-pen me-1"></i>Creator</span>
                         </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square mx-1" href=""><i class="fab fa-tiktok"></i></a>
+                        <div class="p-4">
+                            <h5 class="text-white mb-1">Ferissa Ilen Aswa Aulia</h5>
+                            <p class="text-primary mb-3">Content Creator</p>
+                            <p class="text-white-50 small mb-3">Crafting engaging content for our gaming community.</p>
+                            <div class="mb-3">
+                                <small class="text-white-50 d-flex justify-content-between mb-1">
+                                    <span>Content</span><span>90%</span>
+                                </small>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                            </div>
+                            <div class="team-social">
+                                <a href="https://www.instagram.com/calllcaaa?igsh=c3d0aHhpM3V0YmIw"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.tiktok.com/@caajsi?_r=1&_t=ZS-933WKXLGQjN"><i class="fab fa-tiktok"></i></a>
+                            </div>
                         </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Sebastian Alexander Eka C</h5>
-                            <small>Front-End Developer</small>
+                    </div>
+                </div>
+                <!-- Member 4 -->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="team-card text-center pb-4">
+                        <div class="team-img-wrapper">
+                            <img src="img/Screenshot 2025-09-24 130025.png" alt="Sebastian" class="team-img">
+                            <span class="team-level text-white"><i class="fas fa-code me-1"></i>Dev</span>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="text-white mb-1">Sebastian Alexander E.C</h5>
+                            <p class="text-primary mb-3">Front-End Developer</p>
+                            <p class="text-white-50 small mb-3">Building the digital foundation of our platform.</p>
+                            <div class="mb-3">
+                                <small class="text-white-50 d-flex justify-content-between mb-1">
+                                    <span>Coding</span><span>88%</span>
+                                </small>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 88%"></div></div>
+                            </div>
+                            <div class="team-social">
+                                <a href="https://www.instagram.com/ynzephyz/"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.tiktok.com/@yansukaio?_r=1&_t=ZS-933XFyCszx6"><i class="fab fa-tiktok"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Team End -->
 
 
-    <!-- Footer Start -->
+    <!-- Join Team CTA -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInLeft">
+                    <h6 class="section-title bg-white text-primary px-3">JOIN US</h6>
+                    <h1 class="mb-4">Want to Join Our Team?</h1>
+                    <p class="mb-4">We're always looking for passionate gamers to join our squad. If you love gaming and want to be part of something awesome, reach out to us!</p>
+                    <div class="d-flex gap-3">
+                        <a href="contact.html" class="btn btn-primary py-3 px-5">Contact Us</a>
+                        <a href="about.html" class="btn btn-outline-primary py-3 px-5">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInRight">
+                    <div class="bg-dark p-4 rounded">
+                        <h5 class="text-white mb-4"><i class="fas fa-gamepad me-2"></i>What We Look For</h5>
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                <i class="fas fa-heart text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-white mb-0">Passion for Gaming</h6>
+                                <small class="text-white-50">Love what you do</small>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                <i class="fas fa-users text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-white mb-0">Team Player</h6>
+                                <small class="text-white-50">Work well with others</small>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                <i class="fas fa-lightbulb text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-white mb-0">Creative Mind</h6>
+                                <small class="text-white-50">Think outside the box</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-3">Quick Links</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">FAQs & Help</a>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="service.html">Services</a>
+                    <a class="btn btn-link" href="package.html">Game Store</a>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>SMKN 7 Semarang, Jawa Tengah</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+62 87760573989</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Semarang, Jawa Tengah</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+6287760573989</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>pemberani073@gmail.com</p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-white mb-3">Follow Us</h4>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Game Gallery</h4>
-                    <div class="row g-2 pt-2">
-                        <div class="col-4"><img class="img-fluid bg-light p-1" src="img/rdr22.jpg" alt=""></div>
-                        <div class="col-4"><img class="img-fluid bg-light p-1" src="img/gta 5.jpg" alt=""></div>
-                        <div class="col-4"><img class="img-fluid bg-light p-1" src="img/pubg.jpg" alt=""></div>
-                        <div class="col-4"><img class="img-fluid bg-light p-1" src="img/black-myth-wukong-HD-scaled.jpg" alt=""></div>
-                        <div class="col-4"><img class="img-fluid bg-light p-1" src="img/call-of-duty-black-ops-6-1-1536x864.jpg" alt=""></div>
-                        <div class="col-4"><img class="img-fluid bg-light p-1" src="img/counter-strike-2-csgo-cases-record-steam-valve-fps-game-limited-test.jpg" alt=""></div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Newsletter</h4>
-                    <p>Subscribe for latest game deals and updates.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Subscribe</button>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
             </div>
@@ -235,40 +319,21 @@
         <div class="container">
             <div class="copyright">
                 <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Gamer Store</a>, All Right Reserved.
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <div class="footer-menu">
-                            <a href="">Home</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FAQs</a>
-                        </div>
+                    <div class="col-12 text-center">
+                        &copy; 2024 <a class="border-bottom" href="#">Gamer Store</a>. All Rights Reserved.
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer End -->
 
-    <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-    <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
-    <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
-
 </html>
